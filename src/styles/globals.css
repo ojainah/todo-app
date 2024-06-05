@@ -1,0 +1,27 @@
+body {
+  padding: 0 240px;
+  /* background-color: #EDF2F6; */
+}
+
+.pjt__main {
+  text-align: center;
+}
+
+.pjt__title {
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+
+.pjt__input {
+  display: grid;
+  height: auto;
+  text-align: center;
+}
+
+.input__button {
+  margin: 8px 0;
+}
+
+div{
+  color: black;
+}

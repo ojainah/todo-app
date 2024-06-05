@@ -88,7 +88,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} sx={{ backgroundColor: '#fff'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -103,7 +103,7 @@ export default function PersistentDrawerLeft() {
             TODO-APP
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar >
       <Drawer
         sx={{
           width: drawerWidth,
@@ -127,7 +127,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['プロジェクトA', 'プロジェクトB'].map((text, index) => (
+          {['Project-A', 'Project-B'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -141,7 +141,19 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <TextField multiline />
+          <div className="pjt__main">
+            <div className="pjt__title">
+              <Typography variant="h4">
+                Project-A's Tasks
+              </Typography>
+            </div>
+            <div className="pjt__input">
+              <TextField multiline />
+              <Button className="input__button" variant="contained" size='large' startIcon={<AddIcon />}>
+                Add
+              </Button>
+            </div>
+          </div>
       </Main>
     </Box>
   );
